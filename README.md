@@ -4,7 +4,8 @@
 > [Fart Movie](https://github.com/gddmadoss/fart-movie) series, into any
 > JavaScript application.
 
-Works in Deno, Node.js, and browsers.
+The sounds are served as plain HTTPS WAV URLs, so any JS app can play them —
+even without importing this library.
 
 ## Embed
 
@@ -26,7 +27,9 @@ import { makeSoundURL, randomSound } from "https://raw.githubusercontent.com/gdd
 const response = await fetch(makeSoundURL(randomSound()));
 ```
 
-## Play (browser)
+## Play
+
+With the library (browser):
 
 ```ts
 import { playSound, randomSound } from "https://raw.githubusercontent.com/gddmadoss/fart-js/main/play.ts";
@@ -40,6 +43,19 @@ factory for anything else:
 ```ts
 await playSound(randomSound(), (src) => new Audio(src));
 ```
+
+Or with plain JS — the URLs are all you need:
+
+```js
+const audio = new Audio(
+  "https://github.com/gddmadoss/fart-js/raw/main/sounds/fart-movie-gregory-title1-extracted1.wav",
+);
+audio.play();
+```
+
+> [!NOTE]
+> Source-URL imports work directly in Deno and Bun. Node.js apps and bundlers
+> can vendor the files or point their build tool at the repo.
 
 ## Sounds API
 
