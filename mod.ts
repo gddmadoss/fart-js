@@ -25,7 +25,7 @@ export { sounds };
 
 /** Make the streaming URL of a sound. */
 export function makeSoundURL(data: SoundData) {
-  return `https://github.com/gddmadoss/fart-js/raw/main/sounds/${data.sound}`;
+  return `https://raw.githubusercontent.com/gddmadoss/fart-js/main/sounds/${data.sound}`;
 }
 
 /** Get a sound by zero-based index into the catalog. */

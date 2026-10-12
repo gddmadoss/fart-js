@@ -3,11 +3,9 @@
   "version": "0.1.0",
   "exports": {
     ".": "./mod.ts",
-    "./play": "./play.ts",
-    "./server": "./server.ts"
+    "./play": "./play.ts"
   },
   "tasks": {
-    "serve": "deno run --allow-net server.ts",
-    "check": "deno check mod.ts play.ts server.ts"
+    "check": "deno check mod.ts play.ts"
   }
 }

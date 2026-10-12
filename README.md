@@ -48,7 +48,7 @@ Or with plain JS — the URLs are all you need:
 
 ```js
 const audio = new Audio(
-  "https://github.com/gddmadoss/fart-js/raw/main/sounds/fart-movie-gregory-title1-extracted1.wav",
+  "https://raw.githubusercontent.com/gddmadoss/fart-js/main/sounds/fart-movie-gregory-title1-extracted1.wav",
 );
 audio.play();
 ```
@@ -56,21 +56,6 @@ audio.play();
 > [!NOTE]
 > Source-URL imports work directly in Deno and Bun. Node.js apps and bundlers
 > can vendor the files or point their build tool at the repo.
-
-## Sounds API
-
-Run the HTTP server.
-
-```sh
-deno task serve
-```
-
-- `GET /` — stream a random fart noise.
-- `GET /:id` — stream the fart noise at zero-based index `id`.
-
-> [!NOTE]
-> The API was formerly hosted at `farts.deno.dev`. Deno Deploy Classic was
-> sunset on July 20, 2026, so run it yourself anywhere Deno runs.
 
 ## Catalog
 
